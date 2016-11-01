@@ -4,8 +4,8 @@
 
 import UIKit
 import Nuke
-import NukeFLAnimatedImagePlugin
-import FLAnimatedImage
+import NukeGifuPlugin
+import Gifu
 
 private let textViewCellReuseID = "textViewReuseID"
 private let imageCellReuseID = "imageCellReuseID"

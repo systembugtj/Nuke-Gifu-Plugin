@@ -1,22 +1,22 @@
 PODS:
-  - FLAnimatedImage (1.0.12)
-  - Nuke (4.0)
-  - Nuke-FLAnimatedImage-Plugin (2.0):
-    - FLAnimatedImage (~> 1.0)
+  - Gifu (2.0.0-rc)
+  - Nuke (4.1.2)
+  - Nuke-Gifu-Plugin (0.1):
+    - Gifu (~> 2.0-rc)
     - Nuke (~> 4.0)
 
 DEPENDENCIES:
-  - Nuke-FLAnimatedImage-Plugin (from `../`)
+  - Nuke-Gifu-Plugin (from `../`)
 
 EXTERNAL SOURCES:
-  Nuke-FLAnimatedImage-Plugin:
+  Nuke-Gifu-Plugin:
     :path: ../
 
 SPEC CHECKSUMS:
-  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
-  Nuke: c738cc70c96febfbc974809c1eb8b3d600b09a6b
-  Nuke-FLAnimatedImage-Plugin: de4b8147ef8abaf8baf1928112ae631eaf05a8a2
+  Gifu: ba59ea30a6bb0c3a258e80b6461db76ae301039f
+  Nuke: 7cfd2acdf90c36f66e6ea40795bac0d851a9afe0
+  Nuke-Gifu-Plugin: 94cc584c8206d3e2a2e9157e8408f99b63e74151
 
-PODFILE CHECKSUM: ed431948c7ecaba8d524680d80bb754947864258
+PODFILE CHECKSUM: db758d7765a543ed889ea018b0e82214c4c60a1c
 
 COCOAPODS: 1.1.0.rc.2

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		039388D1E606449B2E309828 /* Pods_Nuke_Gifu_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CAB00FEC68397C9C407AF0 /* Pods_Nuke_Gifu_Demo.framework */; };
 		0C232ABF1D9196F5004CAFC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C232ABE1D9196F5004CAFC8 /* AppDelegate.swift */; };
 		0C232AC11D9196F5004CAFC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C232AC01D9196F5004CAFC8 /* ViewController.swift */; };
 		0C232AC41D9196F5004CAFC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C232AC21D9196F5004CAFC8 /* Main.storyboard */; };
@@ -16,16 +17,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C232ABC1D9196F5004CAFC8 /* Nuke-FLAnimatedImage-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nuke-FLAnimatedImage-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C232ABC1D9196F5004CAFC8 /* Nuke-Gifu-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nuke-Gifu-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C232ABE1D9196F5004CAFC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C232AC01D9196F5004CAFC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0C232AC31D9196F5004CAFC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C232AC51D9196F5004CAFC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C232AC81D9196F5004CAFC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C232ACA1D9196F5004CAFC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28CAB00FEC68397C9C407AF0 /* Pods_Nuke_Gifu_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nuke_Gifu_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AFD25F7E063686B549722E9 /* Pods_Nuke_FLAnimatedImage_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nuke_FLAnimatedImage_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F9382A8DD1F371E4165DA59 /* Pods-Nuke Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nuke Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nuke Demo/Pods-Nuke Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		86980F4BF37BE7E58BD3F7CF /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8D045530D29BD0581018597 /* Pods-Nuke-Gifu-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nuke-Gifu-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nuke-Gifu-Demo/Pods-Nuke-Gifu-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		BE2CFE43209DF48E045EA7BB /* Pods-Nuke-FLAnimatedImage-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nuke-FLAnimatedImage-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nuke-FLAnimatedImage-Demo/Pods-Nuke-FLAnimatedImage-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		BF9DAB879AC07FF7D438B4C2 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		CA4F98B22D21BCC69907752C /* Pods-Nuke Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nuke Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nuke Demo/Pods-Nuke Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -33,6 +36,7 @@
 		D1C764F283FAFD6FF8599B6A /* Pods_Nuke_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nuke_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D41C16807F95F83FB63DA311 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D724F3D2F4988C64F2AE1624 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		FD30CCCEF2F4FED591815A8D /* Pods-Nuke-Gifu-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nuke-Gifu-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nuke-Gifu-Demo/Pods-Nuke-Gifu-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F50A7C49F25F834028A6AE21 /* Pods_Nuke_FLAnimatedImage_Demo.framework in Frameworks */,
+				039388D1E606449B2E309828 /* Pods_Nuke_Gifu_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +74,8 @@
 				D724F3D2F4988C64F2AE1624 /* Pods-Demo.release.xcconfig */,
 				BE2CFE43209DF48E045EA7BB /* Pods-Nuke-FLAnimatedImage-Demo.debug.xcconfig */,
 				CFE006FA9747B0D7595611DB /* Pods-Nuke-FLAnimatedImage-Demo.release.xcconfig */,
+				FD30CCCEF2F4FED591815A8D /* Pods-Nuke-Gifu-Demo.debug.xcconfig */,
+				B8D045530D29BD0581018597 /* Pods-Nuke-Gifu-Demo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -86,7 +93,7 @@
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0C232ABC1D9196F5004CAFC8 /* Nuke-FLAnimatedImage-Demo.app */,
+				0C232ABC1D9196F5004CAFC8 /* Nuke-Gifu-Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,6 +105,7 @@
 				D1C764F283FAFD6FF8599B6A /* Pods_Nuke_Demo.framework */,
 				86980F4BF37BE7E58BD3F7CF /* Pods_Demo.framework */,
 				6AFD25F7E063686B549722E9 /* Pods_Nuke_FLAnimatedImage_Demo.framework */,
+				28CAB00FEC68397C9C407AF0 /* Pods_Nuke_Gifu_Demo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -105,9 +113,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0C232ABB1D9196F5004CAFC8 /* Nuke-FLAnimatedImage-Demo */ = {
+		0C232ABB1D9196F5004CAFC8 /* Nuke-Gifu-Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0C232ACB1D9196F5004CAFC8 /* Build configuration list for PBXNativeTarget "Nuke-FLAnimatedImage-Demo" */;
+			buildConfigurationList = 0C232ACB1D9196F5004CAFC8 /* Build configuration list for PBXNativeTarget "Nuke-Gifu-Demo" */;
 			buildPhases = (
 				D327251DB79836F6BFC5904B /* [CP] Check Pods Manifest.lock */,
 				0C232AB81D9196F5004CAFC8 /* Sources */,
@@ -120,9 +128,9 @@
 			);
 			dependencies = (
 			);
-			name = "Nuke-FLAnimatedImage-Demo";
+			name = "Nuke-Gifu-Demo";
 			productName = "Nuke-FLAnimatedImage-Demo";
-			productReference = 0C232ABC1D9196F5004CAFC8 /* Nuke-FLAnimatedImage-Demo.app */;
+			productReference = 0C232ABC1D9196F5004CAFC8 /* Nuke-Gifu-Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -132,7 +140,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					0C232ABB1D9196F5004CAFC8 = {
@@ -155,7 +163,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0C232ABB1D9196F5004CAFC8 /* Nuke-FLAnimatedImage-Demo */,
+				0C232ABB1D9196F5004CAFC8 /* Nuke-Gifu-Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -186,7 +194,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nuke-FLAnimatedImage-Demo/Pods-Nuke-FLAnimatedImage-Demo-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nuke-Gifu-Demo/Pods-Nuke-Gifu-Demo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D327251DB79836F6BFC5904B /* [CP] Check Pods Manifest.lock */ = {
@@ -216,7 +224,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nuke-FLAnimatedImage-Demo/Pods-Nuke-FLAnimatedImage-Demo-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nuke-Gifu-Demo/Pods-Nuke-Gifu-Demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -255,8 +263,9 @@
 /* Begin XCBuildConfiguration section */
 		0C232ACC1D9196F5004CAFC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE2CFE43209DF48E045EA7BB /* Pods-Nuke-FLAnimatedImage-Demo.debug.xcconfig */;
+			baseConfigurationReference = FD30CCCEF2F4FED591815A8D /* Pods-Nuke-Gifu-Demo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -266,7 +275,7 @@
 				INFOPLIST_FILE = Source/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.kean.Nuke-FLAnimatedImage-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.kean.Nuke-Gifu-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 3.0;
@@ -276,8 +285,9 @@
 		};
 		0C232ACD1D9196F5004CAFC8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFE006FA9747B0D7595611DB /* Pods-Nuke-FLAnimatedImage-Demo.release.xcconfig */;
+			baseConfigurationReference = B8D045530D29BD0581018597 /* Pods-Nuke-Gifu-Demo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -286,7 +296,7 @@
 				INFOPLIST_FILE = Source/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.kean.Nuke-FLAnimatedImage-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.kean.Nuke-Gifu-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
@@ -383,7 +393,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0C232ACB1D9196F5004CAFC8 /* Build configuration list for PBXNativeTarget "Nuke-FLAnimatedImage-Demo" */ = {
+		0C232ACB1D9196F5004CAFC8 /* Build configuration list for PBXNativeTarget "Nuke-Gifu-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0C232ACC1D9196F5004CAFC8 /* Debug */,

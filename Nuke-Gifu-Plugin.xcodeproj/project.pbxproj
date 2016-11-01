@@ -10,6 +10,7 @@
 		0C06D2321C11F47D00CC5C35 /* AnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C06D2301C11F47D00CC5C35 /* AnimatedImage.swift */; };
 		0C06D23A1C11F62300CC5C35 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06D2381C11F62300CC5C35 /* Nuke.framework */; };
 		0CCA569D1DC8A965007ECC46 /* Gifu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCA569C1DC8A965007ECC46 /* Gifu.framework */; };
+		0CCA56A01DC8AFDE007ECC46 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 0CCA569F1DC8AFDE007ECC46 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,10 @@
 		0C06D2351C11F4A900CC5C35 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C06D2381C11F62300CC5C35 /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
 		0CCA569C1DC8A965007ECC46 /* Gifu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gifu.framework; path = Carthage/Build/iOS/Gifu.framework; sourceTree = "<group>"; };
+		0CCA569F1DC8AFDE007ECC46 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0CCA56A11DC8AFFD007ECC46 /* Nuke-Gifu-Plugin.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Nuke-Gifu-Plugin.podspec"; sourceTree = "<group>"; };
+		0CCA56A21DC8B003007ECC46 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		0CCA56A31DC8B00B007ECC46 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +43,7 @@
 			children = (
 				0C06D22F1C11F47D00CC5C35 /* Source */,
 				0C06D23B1C11F62700CC5C35 /* Frameworks */,
+				0CCA569E1DC8AFD4007ECC46 /* Metadata */,
 				0C06D2251C11F3FF00CC5C35 /* Products */,
 				0C06D2341C11F4A900CC5C35 /* Supporting Files */,
 			);
@@ -74,6 +80,17 @@
 				0C06D2381C11F62300CC5C35 /* Nuke.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0CCA569E1DC8AFD4007ECC46 /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				0CCA569F1DC8AFDE007ECC46 /* README.md */,
+				0CCA56A11DC8AFFD007ECC46 /* Nuke-Gifu-Plugin.podspec */,
+				0CCA56A21DC8B003007ECC46 /* CHANGELOG.md */,
+				0CCA56A31DC8B00B007ECC46 /* Cartfile */,
+			);
+			name = Metadata;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CCA56A01DC8AFDE007ECC46 /* README.md in Sources */,
 				0C06D2321C11F47D00CC5C35 /* AnimatedImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
