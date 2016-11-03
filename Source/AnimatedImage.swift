@@ -116,6 +116,11 @@ public class AnimatedImageView: UIView, Nuke.Target {
         }
     }
 
+    public func prepareForReuse() {
+        imageView.prepareForReuse()
+        imageView.image = nil
+    }
+
     /// Displays an image on success. Runs `opacity` transition if
     /// the response was not from the memory cache.
     public func handle(response: Response, isFromMemoryCache: Bool) {

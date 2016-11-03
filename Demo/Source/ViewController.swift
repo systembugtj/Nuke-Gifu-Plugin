@@ -130,8 +130,7 @@ class AnimatedImageCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
 
-        imageView.imageView.prepareForReuse()
-        imageView.imageView.image = nil
+        imageView.prepareForReuse()
     }
     
     required init?(coder aDecoder: NSCoder) {

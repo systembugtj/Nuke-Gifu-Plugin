@@ -16,6 +16,7 @@ The plugin features a pre-configured `Nuke.Manager` with GIF support, and an `An
 
 ```swift
 let view = AnimatedImageView()
+view.prepareForReuse()
 AnimatedImage.manager.loadImage(with: URL(string: "http://...")!, into: view)
 ```
 
