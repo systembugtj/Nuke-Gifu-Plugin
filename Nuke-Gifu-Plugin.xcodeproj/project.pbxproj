@@ -10,7 +10,6 @@
 		0C06D2321C11F47D00CC5C35 /* AnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C06D2301C11F47D00CC5C35 /* AnimatedImage.swift */; };
 		0C06D23A1C11F62300CC5C35 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06D2381C11F62300CC5C35 /* Nuke.framework */; };
 		0CCA569D1DC8A965007ECC46 /* Gifu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCA569C1DC8A965007ECC46 /* Gifu.framework */; };
-		0CCA56A01DC8AFDE007ECC46 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 0CCA569F1DC8AFDE007ECC46 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -171,7 +170,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CCA56A01DC8AFDE007ECC46 /* README.md in Sources */,
 				0C06D2321C11F47D00CC5C35 /* AnimatedImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
