@@ -49,7 +49,7 @@ github "kean/Nuke-Gifu-Plugin"
 
 ## Dependencies
 
-- [Nuke 4.x](https://github.com/kean/Nuke)
+- [Nuke 5.x](https://github.com/kean/Nuke)
 - [Gifu 2.x](https://github.com/kaishin/Gifu)
 
 ## License

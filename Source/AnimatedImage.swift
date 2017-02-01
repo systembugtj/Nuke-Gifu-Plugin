@@ -43,7 +43,7 @@ public extension AnimatedImage {
         // Updates `Cache` cost calculation block.
         let cache = Nuke.Cache().preparedForAnimatedImages()
         
-        let loader = Nuke.Loader(loader: Nuke.DataLoader(), decoder: decoder, cache: cache)
+        let loader = Nuke.Loader(loader: Nuke.DataLoader(), decoder: decoder)
         
         // Disable processing of animated images.
         loader.makeProcessor = { image, request in
@@ -120,25 +120,24 @@ public class AnimatedImageView: UIView, Nuke.Target {
         imageView.prepareForReuse()
         imageView.image = nil
     }
-
+    
     /// Displays an image on success. Runs `opacity` transition if
     /// the response was not from the memory cache.
-    public func handle(response: Response, isFromMemoryCache: Bool) {
-        if case let .fulfilled(image) = response {
-            imageView.prepareForReuse()
-            if let image = image as? AnimatedImage {
-                imageView.animate(withGIFData: image.data)
-            } else {
-                imageView.image = image
-            }
-            if !isFromMemoryCache {
-                let animation = CABasicAnimation(keyPath: "opacity")
-                animation.duration = 0.25
-                animation.fromValue = 0
-                animation.toValue = 1
-                let layer: CALayer? = imageView.layer // Make compiler happy on OSX
-                layer?.add(animation, forKey: "imageTransition")
-            }
+    public func handle(response: Result<Image>, isFromMemoryCache: Bool) {
+        guard let image = response.value else { return }
+        imageView.prepareForReuse()
+        if let image = image as? AnimatedImage {
+            imageView.animate(withGIFData: image.data)
+        } else {
+            imageView.image = image
+        }
+        if !isFromMemoryCache {
+            let animation = CABasicAnimation(keyPath: "opacity")
+            animation.duration = 0.25
+            animation.fromValue = 0
+            animation.toValue = 1
+            let layer: CALayer? = imageView.layer // Make compiler happy on OSX
+            layer?.add(animation, forKey: "imageTransition")
         }
     }
 }
