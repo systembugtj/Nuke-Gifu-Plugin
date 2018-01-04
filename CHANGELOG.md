@@ -1,10 +1,10 @@
 ## Nuke Gifu Plugin 2.0
 
-- Updated for Nuke 6, Gifu 3
+- Updated to Nuke 6, Gifu 3
 
 ## Nuke Gifu Plugin 1.0
 
-- Updated for Nuke 5.0
+- Updated to Nuke 5.0
 
 ## Nuke Gifu Plugin 0.2
 
