@@ -46,13 +46,15 @@ public extension AnimatedImage {
         
         // Updates `Cache` cost calculation block.
         let cache = Nuke.Cache().preparedForAnimatedImages()
-        
-        let loader = Nuke.Loader(loader: Nuke.DataLoader(), decoder: decoder)
-        
+
+        var options = Nuke.Loader.Options()
         // Disable processing of animated images.
-        loader.makeProcessor = { image, request in
+        options.processor = { image, request in
             return image is AnimatedImage ? nil : request.processor
         }
+        let loader = Nuke.Loader(loader: Nuke.DataLoader(), decoder: decoder, options: options)
+        
+
         return Manager(loader: loader, cache: cache)
     }()
 }

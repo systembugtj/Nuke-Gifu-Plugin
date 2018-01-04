@@ -44,13 +44,13 @@ github "kean/Nuke-Gifu-Plugin"
 ## Requirements
 
 - iOS 9
-- Xcode 8
-- Swift 3
+- Xcode 9
+- Swift 4
 
 ## Dependencies
 
-- [Nuke 5.x](https://github.com/kean/Nuke)
-- [Gifu 2.x](https://github.com/kaishin/Gifu)
+- [Nuke 6](https://github.com/kean/Nuke)
+- [Gifu 3](https://github.com/kaishin/Gifu)
 
 ## License
 
