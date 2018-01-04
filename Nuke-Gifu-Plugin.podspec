@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
     s.module_name      = "NukeGifuPlugin"
 
     s.dependency 'Nuke', '~> 6.0'
-    s.dependency 'Gifu', '~> 6.0'
+    s.dependency 'Gifu', '~> 3.0'
 
     s.source_files  = 'Source/**/*'
 end
