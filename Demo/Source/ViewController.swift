@@ -81,11 +81,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: imageCellReuseID, for: indexPath) as! AnimatedImageCell
             
-            cell.activityIndicator.startAnimating()
-            AnimatedImage.manager.loadImage(with: Request(url: imageURLs[indexPath.row]), into: cell.imageView) { [weak cell] in
-                cell?.activityIndicator.stopAnimating()
-                cell?.imageView.handle(response: $0, isFromMemoryCache: $1)
-            }
+            Nuke.loadImage(with: ImageRequest(url: imageURLs[indexPath.row]), into: cell.imageView)
             
             return cell
         }

@@ -19,7 +19,7 @@ extension UIImage : _ExpressibleByImageLiteral {
 }
 
 /// Represents animated image data alongside a poster image (first image frame).
-public class AnimatedImage: UIImage {
+public class AnimatedImage: Image {
     public let data: Data
     
     public init(data: Data, poster: CGImage) {
@@ -41,34 +41,11 @@ public class AnimatedImage: UIImage {
     }
 }
 
-public extension AnimatedImage {
-    /// Default `Nuke.Manager` with animated GIF support.
-    public static let manager: Nuke.Manager = {
-        // Make a decoder which supports animated GIFs.
-        let decoder = Nuke.DataDecoderComposition(decoders: [AnimatedImageDecoder(), Nuke.DataDecoder()])
-        
-        // Updates `Cache` cost calculation block.
-        let cache = Nuke.Cache().preparedForAnimatedImages()
-
-        var options = Nuke.Loader.Options()
-        // Disable processing of animated images.
-        options.processor = { image, request in
-            return image is AnimatedImage ? nil : request.processor
-        }
-        let loader = Nuke.Loader(loader: Nuke.DataLoader(), decoder: decoder, options: options)
-        
-
-        return Manager(loader: loader, cache: cache)
-    }()
-}
-
 /// Creates instances of `AnimatedImage` class from the given data.
 /// Returns `nil` is data doesn't contain an animated GIF.
-public class AnimatedImageDecoder: Nuke.DataDecoding {
-    public init() {}
-    
-    public func decode(data: Data, response: URLResponse) -> Nuke.Image? {
-        guard self.isAnimatedGIFData(data) else {
+public class AnimatedImageDecoder: Nuke.ImageDecoding {
+    public func decode(data: Data, isFinal: Bool) -> Image? {
+        guard AnimatedImageDecoder.isAnimatedGIFData(data) else {
             return nil
         }
         guard let poster = self.posterImage(for: data) else {
@@ -77,15 +54,10 @@ public class AnimatedImageDecoder: Nuke.DataDecoding {
         return AnimatedImage(data: data, poster: poster)
     }
     
-    public func isAnimatedGIFData(_ data: Data) -> Bool {
-        let sigLength = 3
-        if data.count < sigLength {
-            return false
-        }
-        var sig = [UInt8](repeating: 0, count: sigLength)
-        (data as NSData).getBytes(&sig, length:sigLength)
-        return sig[0] == 0x47 && sig[1] == 0x49 && sig[2] == 0x46
+    public init() {
+        
     }
+
     
     private func posterImage(for data: Data) -> CGImage? {
         if let source = CGImageSourceCreateWithData(data as CFData, nil) {
@@ -95,12 +67,38 @@ public class AnimatedImageDecoder: Nuke.DataDecoding {
     }
 }
 
+
+// MARK: - check webp format data.
+extension AnimatedImageDecoder {
+    public static func isAnimatedGIFData(_ data: Data) -> Bool {
+        let sigLength = 3
+        if data.count < sigLength {
+            return false
+        }
+        var sig = [UInt8](repeating: 0, count: sigLength)
+        (data as NSData).getBytes(&sig, length:sigLength)
+        return sig[0] == 0x47 && sig[1] == 0x49 && sig[2] == 0x46
+    }
+    
+    public static func enable() {
+        Nuke.ImageDecoderRegistry.shared.register { (context) -> ImageDecoding? in
+            AnimatedImageDecoder.enable(context: context)
+        }
+    }
+    
+    public static func enable(context: Nuke.ImageDecodingContext) -> Nuke.ImageDecoding? {
+        return isAnimatedGIFData(context.data) ? AnimatedImageDecoder() : nil
+    }
+    
+}
+
 /// Simple `Gifu.GIFImageView` wrapper that implement `Nuke.Target` protocol.
 ///
 /// The reason why this is a standalone class and not a simple overridden method
 /// from `UIImageView` extension is because declarations from extensions
 /// cannot be overridden in Swift (yet).
-public class AnimatedImageView: UIView, Nuke.Target {
+public class AnimatedImageView: UIView, Nuke.ImageDisplaying {
+    
     public let imageView: Gifu.GIFImageView
     
     public init(imageView: Gifu.GIFImageView = Gifu.GIFImageView()) {
@@ -130,16 +128,14 @@ public class AnimatedImageView: UIView, Nuke.Target {
         imageView.image = nil
     }
     
-    /// Displays an image on success. Runs `opacity` transition if
-    /// the response was not from the memory cache.
-    public func handle(response: Result<Image>, isFromMemoryCache: Bool) {
-        guard let image = response.value else { return }
+    public func display(image: Image?) {
         imageView.prepareForReuse()
         if let image = image as? AnimatedImage {
             imageView.animate(withGIFData: image.data)
         } else {
             imageView.image = image
         }
+        /*
         if !isFromMemoryCache {
             let animation = CABasicAnimation(keyPath: "opacity")
             animation.duration = 0.25
@@ -147,21 +143,6 @@ public class AnimatedImageView: UIView, Nuke.Target {
             animation.toValue = 1
             let layer: CALayer? = imageView.layer // Make compiler happy on OSX
             layer?.add(animation, forKey: "imageTransition")
-        }
-    }
-}
-
-public extension Nuke.Cache {
-    /// Updates `Cache` cost block by adding special handling of `AnimatedImage`.
-    public func preparedForAnimatedImages() -> Self {
-        let cost = self.cost
-        self.cost = {
-            var val = cost($0)
-            if let animatedImage = $0 as? AnimatedImage {
-                val += animatedImage.data.count
-            }
-            return val
-        }
-        return self
+        }*/
     }
 }
