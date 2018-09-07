@@ -7,6 +7,17 @@ import ImageIO
 import Gifu
 import Nuke
 
+// MARK: - UIImage Extension
+extension UIImage : _ExpressibleByImageLiteral {
+    private convenience init!(failableImageLiteral name: String) {
+        self.init(named: name)
+    }
+    
+    public convenience init(imageLiteralResourceName name: String) {
+        self.init(failableImageLiteral: name)
+    }
+}
+
 /// Represents animated image data alongside a poster image (first image frame).
 public class AnimatedImage: UIImage {
     public let data: Data
@@ -27,14 +38,6 @@ public class AnimatedImage: UIImage {
     public override func encode(with aCoder: NSCoder) {
         super.encode(with: aCoder)
         aCoder.encode(data, forKey: "_nk_data")
-    }
-    
-    public required convenience init(imageLiteralResourceName name: String) {
-        fatalError("init(imageLiteral:) has not been implemented")
-    }
-
-    public required init(itemProviderData data: Data, typeIdentifier: String) throws {
-        fatalError("init(itemProviderData:typeIdentifier:) has not been implemented")
     }
 }
 
